@@ -40,6 +40,7 @@ body {
 	font-weight: bold;
 }
 
+.nominated-movie { margin-bottom: 10px; line-height: .8em;}
 .color-green { color: var(--green); }
 .color-red { color: var(--red); }
 .bg-color-green { background-color: var(--green); }
@@ -98,7 +99,7 @@ body {
 	margin-top: 10px;
 	color: white;
 }
-.btn-danger { background-color: var(--red); margin-left: 5px; }
+.btn-danger { background-color: var(--red); margin-left: 5px; padding: 5px; }
 .btn-danger:hover { background-color: var(--green); }
 .btn-primary:hover { background-color: var(--green); }
 .btn-primary:disabled { background-color: grey; }

@@ -35,9 +35,13 @@ function listNominations() {
 	db.forEach(item => {
 		const nominations = document.createElement('li')
 		const cancelNominationButton = document.createElement('button')
+
 		nominations.innerHTML = item.Title
 		cancelNominationButton.innerHTML = 'Remove'
+
 		cancelNominationButton.classList.add('btn-danger')
+		nominations.classList.add('nominated-movie')
+
 		cancelNominationButton.setAttribute('id', item.imdbID)
 
 		nominationList.appendChild(nominations)
