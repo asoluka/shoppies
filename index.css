@@ -1,0 +1,115 @@
+:root {
+	--green: #004c3f;
+	--red: #db0510;
+	--shopify: #fbf7ed;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+input:focus { border: 0 !important; }
+.form-control { line-height: 2em; }
+
+ul { padding-left: 16px; }
+.no-margin { margin: 0; }
+.color-white { color: #fff; }
+.bg-color-white { background-color: #fff; }
+.bg-color-shopify { background-color: var(--shopify); }
+
+body {
+	background-color: #000;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, Lucida Grande, sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	color: #0f0f0f;
+	font-weight: 400;
+}
+
+.homepage-hero__heading, .nominations-heading {
+	font-size: 2.25em;
+	font-weight: 800;
+}
+
+.nominations-heading {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.color-green { color: var(--green); }
+.color-red { color: var(--red); }
+.bg-color-green { background-color: var(--green); }
+.bg-color-red { background-color: var(--red); }
+
+.bold {
+	font-weight: bold;
+}
+
+.segment, #nominations {
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+#search-result-segment, #nominations {
+	display: none;
+}
+
+#nominations {
+	margin-top: 40px;
+}
+
+.movie-poster {
+	display: block;
+	height: 170px;
+	/* object-fit: cover; */
+	object-position: center;
+}
+
+.card { margin-bottom: 10px;}
+.card-body {
+	min-height: 100px;
+}
+
+.card-title {
+	font-weight: bold;
+	font-size: .8em;
+}
+
+.release-date {	
+	font-size: .8em; 
+	background-color: var(--green);
+	padding: 3px;
+	color: white;
+	margin-left: 5px;
+	border-radius: 5px;
+}
+
+.btn-primary { 
+	background-color: rgb(2, 2, 2);
+}
+.btn-primary, .btn-danger {
+	border: 0;
+	display: inline-block;
+	margin-top: 10px;
+	color: white;
+}
+.btn-danger { background-color: var(--red); }
+.btn-danger:hover { background-color: var(--green); }
+.btn-primary:hover { background-color: var(--green); }
+.btn-primary:disabled { background-color: grey; }
+
+main {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+footer {
+	margin-bottom: 30px;
+}
