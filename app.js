@@ -70,8 +70,8 @@ async function getMovies (e) {
 		resultHeading.textContent = `Results for "${searchTerm}":`
 		searchResult.filter(item => item.Type == 'movie')
 			.forEach(item => {
-				let imageSrc = './images/no-image.jpg'; 
-				
+				let imageSrc = './images/no-image.png'; 
+
 				if(item.Poster != 'N/A') {
 					imageSrc = item.Poster
 				}

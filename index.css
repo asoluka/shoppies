@@ -67,7 +67,9 @@ body {
 .movie-poster {
 	display: block;
 	height: 170px;
-	object-position: center;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .card { margin-bottom: 10px;}
