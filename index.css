@@ -65,9 +65,19 @@ body {
 }
 
 .movie-poster {
+	height: inherit;
+	width: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter: blur(5px);
+	z-index: 2;
+}
+
+.movie-poster-bg {
 	display: block;
 	height: 170px;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }

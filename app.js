@@ -79,6 +79,7 @@ async function getMovies (e) {
 				const movieWrapper = document.createElement('div')
 				const movieCard = document.createElement('div')
 				const movieImage = document.createElement('div')
+				const posterBackground = document.createElement('div')
 				const cardBody = document.createElement('div')
 				const emptyElement = document.createElement('div')
 				const movieTitle = document.createElement('b')
@@ -88,12 +89,14 @@ async function getMovies (e) {
 				movieWrapper.classList.add('col-sm-3')
 				movieCard.classList.add('card')
 				movieImage.classList.add('movie-poster')
+				posterBackground.classList.add('movie-poster-bg')
 				cardBody.classList.add('card-body')
 				movieTitle.classList.add('card-title')
 				releasedDate.classList.add('release-date')
 				nominateButton.classList.add('btn-primary')
 
 				movieImage.style.backgroundImage = `url(${imageSrc})`
+				posterBackground.style.backgroundImage = `url(${imageSrc})`
 				movieTitle.textContent = item.Title.substring(0, 21)
 				releasedDate.textContent = item.Year
 				nominateButton.textContent = 'Nominate'
@@ -101,8 +104,9 @@ async function getMovies (e) {
 				movieTitle.setAttribute('title', item.Title)
 				nominateButton.setAttribute('id', item.imdbID)
 				
+				posterBackground.appendChild(movieImage)
 				cardBody.append(movieTitle, releasedDate, emptyElement, nominateButton)
-				movieCard.append(movieImage, cardBody)
+				movieCard.append(posterBackground, cardBody)
 				movieWrapper.appendChild(movieCard)
 				searchResults.appendChild(movieWrapper)
 
