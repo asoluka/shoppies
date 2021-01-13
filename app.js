@@ -1,4 +1,4 @@
-let db = JSON.parse(localStorage.getItem('nominations'))
+let db = JSON.parse(localStorage.getItem('nominations')) || Array()
 let movieTitle = document.getElementById('search-input')
 let resultHeading = document.getElementById('result-heading')
 let searchResultSegment = document.getElementById('search-result-segment')
@@ -15,7 +15,7 @@ function toogleResultSegment() {
 
 async function nominate(e) {
 	const nominationButton = e.target
-	const response = await fetch(`http://www.omdbapi.com/?i=${nominationButton.id}&apikey=5bb9cee4`)
+	const response = await fetch(`https://www.omdbapi.com/?i=${nominationButton.id}&apikey=5bb9cee4`)
 	const jsonData = await response.json()
 
 	db.length ? nominations.style.display = 'block' : ''
@@ -50,7 +50,7 @@ async function getMovies (e) {
 	searchResults.innerHTML = '' // clear movie list area for new data.
 
 	const searchTerm = e.target.value
-	const response = await fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=5bb9cee4`)
+	const response = await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=5bb9cee4`)
 	const movies = await response.json()
 	const searchResult = movies.Search
 
