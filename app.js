@@ -70,7 +70,12 @@ async function getMovies (e) {
 		resultHeading.textContent = `Results for "${searchTerm}":`
 		searchResult.filter(item => item.Type == 'movie')
 			.forEach(item => {
-				let imageSrc = item.Poster ? item.Poster : './images/no-image.jpg'
+				let imageSrc = './images/no-image.jpg'; 
+				
+				if(item.Poster != 'N/A') {
+					imageSrc = item.Poster
+				}
+
 				const movieWrapper = document.createElement('div')
 				const movieCard = document.createElement('div')
 				const movieImage = document.createElement('div')
@@ -89,10 +94,11 @@ async function getMovies (e) {
 				nominateButton.classList.add('btn-primary')
 
 				movieImage.style.backgroundImage = `url(${imageSrc})`
-				movieTitle.textContent = item.Title
+				movieTitle.textContent = item.Title.substring(0, 21)
 				releasedDate.textContent = item.Year
 				nominateButton.textContent = 'Nominate'
 
+				movieTitle.setAttribute('title', item.Title)
 				nominateButton.setAttribute('id', item.imdbID)
 				
 				cardBody.append(movieTitle, releasedDate, emptyElement, nominateButton)
