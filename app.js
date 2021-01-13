@@ -34,9 +34,17 @@ function listNominations() {
 	nominationList.innerHTML = ''
 	db.forEach(item => {
 		const nominations = document.createElement('li')
+		const cancelNominationButton = document.createElement('button')
 		nominations.innerHTML = item.Title
+		cancelNominationButton.innerHTML = 'Remove'
+		cancelNominationButton.classList.add('btn-danger')
+		cancelNominationButton.setAttribute('id', item.imdbID)
+
 		nominationList.appendChild(nominations)
+		nominations.appendChild(cancelNominationButton)
 		nominationSegment.appendChild(nominationList)
+
+		cancelNominationButton.addEventListener('click', removeNomination)
 	})
 }
 
@@ -67,7 +75,6 @@ async function getMovies (e) {
 				const movieTitle = document.createElement('b')
 				const releasedDate = document.createElement('span')
 				const nominateButton = document.createElement('button')
-				const cancelNominationButton = document.createElement('button')
 
 				movieWrapper.classList.add('col-sm-3')
 				movieCard.classList.add('card')
@@ -76,24 +83,20 @@ async function getMovies (e) {
 				movieTitle.classList.add('card-title')
 				releasedDate.classList.add('release-date')
 				nominateButton.classList.add('btn-primary')
-				cancelNominationButton.classList.add('btn-danger')
 
 				movieImage.style.backgroundImage = `url(${imageSrc})`
 				movieTitle.textContent = item.Title
 				releasedDate.textContent = item.Year
 				nominateButton.textContent = 'Nominate'
-				cancelNominationButton.textContent = 'Cancel'
 
 				nominateButton.setAttribute('id', item.imdbID)
-				cancelNominationButton.setAttribute('id', item.imdbID)
 				
-				cardBody.append(movieTitle, releasedDate, emptyElement, nominateButton, cancelNominationButton)
+				cardBody.append(movieTitle, releasedDate, emptyElement, nominateButton)
 				movieCard.append(movieImage, cardBody)
 				movieWrapper.appendChild(movieCard)
 				searchResults.appendChild(movieWrapper)
 
 				nominateButton.addEventListener('click', nominate)
-				cancelNominationButton.addEventListener('click', removeNomination)
 			})
 	} else {
 		searchResults.innerHTML = ''

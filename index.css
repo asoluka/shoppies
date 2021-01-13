@@ -36,7 +36,7 @@ body {
 }
 
 .nominations-heading {
-	font-size: 1em;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
@@ -98,7 +98,7 @@ body {
 	margin-top: 10px;
 	color: white;
 }
-.btn-danger { background-color: var(--red); }
+.btn-danger { background-color: var(--red); margin-left: 5px; }
 .btn-danger:hover { background-color: var(--green); }
 .btn-primary:hover { background-color: var(--green); }
 .btn-primary:disabled { background-color: grey; }
