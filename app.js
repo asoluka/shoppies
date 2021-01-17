@@ -128,4 +128,4 @@ window.onload = function() {
 window.onbeforeunload = function(event) {
 	event.returnValue = "Your nominations will be saved till your next visit...";
   localStorage.setItem('nominations', JSON.stringify(db));
-};
+}
