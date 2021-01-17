@@ -25,6 +25,8 @@ async function nominate(e) {
 		nominationButton.disabled = true
 		db.push(jsonData)
 		listNominations()
+	} else {
+		notificationBanner.style.display = 'block'
 	}
 }
 
@@ -53,6 +55,7 @@ function listNominations() {
 
 function removeNomination(e) {
 	db = db.filter(item => item.imdbID != e.target.id)
+	db.length < 5 ? notificationBanner.style.display = 'none' : ''
 	listNominations()
 }
 
@@ -60,7 +63,8 @@ async function getMovies (e) {
 	toogleResultSegment()
 	searchResults.innerHTML = '' // clear movie list area for new data.
 
-	const searchTerm = e.target.value
+	searchTerm = e.target.value
+	console.log(searchTerm)
 	const response = await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=5bb9cee4`)
 	const movies = await response.json()
 	const searchResult = movies.Search
