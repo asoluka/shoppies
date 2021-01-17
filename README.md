@@ -1,6 +1,6 @@
 # UX Developer Intern & Web Developer Intern Challenge - Summer 2021
 ## This is the vanilla version of the challenge solution. 
-[View React Version here:](https://asoluka.github.io/shoppies-react/)
+[View React Version here](https://asoluka.github.io/shoppies-react/)
 ---
 
 
@@ -8,10 +8,10 @@
 We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
 On this app, users are able to:
-[x] Search OMDB and display the results (movies only)
-[x] Add a movie from the search results to our nomination list
-[x] View the list of films already nominated
-[x] Remove a nominee from the nomination list
+[] Search OMDB and display the results (movies only)
+[] Add a movie from the search results to our nomination list
+[] View the list of films already nominated
+[] Remove a nominee from the nomination list
 
 ### Technical requirements
 Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
