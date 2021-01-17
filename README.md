@@ -19,7 +19,7 @@ Search results should come from OMDB's API (free API key: http://www.omdbapi.com
 2. Updates to the search terms update the result list
 3. Movies in search results can be added and removed from the nomination list.
 4. If a search result has already been nominated, the nominate button is disabled.
-- [] Display a banner when the user has 5 nominations.
+- [ ] Display a banner when the user has 5 nominations.
 
 
 ### Extras
