@@ -129,3 +129,20 @@ main {
 footer {
 	margin-bottom: 30px;
 }
+
+#notification-banner {
+	display: none;
+	background: var(--red);
+	color: white;
+	min-height: 80px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px 5px 0 0;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#notification-banner h1 {
+	padding: 0;
+	margin: 0;
+}

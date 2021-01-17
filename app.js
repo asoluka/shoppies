@@ -6,6 +6,7 @@ let nominations = document.getElementById('nominations')
 let searchResults = document.getElementById('search-results')
 let nominationSegment = document.getElementById('nomination-segment')
 let nominationList = document.createElement('ul')
+let notificationBanner = document.getElementById('notification-banner')
 
 function toogleResultSegment() {
 	(movieTitle.value.length > 0)
@@ -24,8 +25,6 @@ async function nominate(e) {
 		nominationButton.disabled = true
 		db.push(jsonData)
 		listNominations()
-	} else {
-		console.log("You can't nominate any more movie")
 	}
 }
 
@@ -122,6 +121,10 @@ window.onload = function() {
 	movieTitle.addEventListener('keyup', getMovies)
 	if (db.length > 0 ){
 		listNominations()
+	}
+
+	if(db.length >= 5) {
+		notificationBanner.style.display = 'block'
 	}
 }
 
