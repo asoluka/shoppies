@@ -32,5 +32,5 @@ There is a lot to be improved on the sample but I decided to
 ## Extra note:
 I'm currently working on code clean-up and also completing the React version of this App. 
 
-[^1]: Made with 💚 and Javascript
+<sup>1</sup> Made with 💚 and Javascript
 
