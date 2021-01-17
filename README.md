@@ -20,10 +20,17 @@ Search results should come from OMDB's API (free API key: http://www.omdbapi.com
 2. Updates to the search terms update the result list
 3. Movies in search results can be added and removed from the nomination list.
 4. If a search result has already been nominated, the nominate button is disabled.
-- [ ] Display a banner when the user has 5 nominations.
+5. Display a banner when the user has 5 nominations.
 
 
 ### Extras
 There is a lot to be improved on the sample but I decided to
 - [x] Polish the required features by crafting a nicer design
 - [x] Save nomination lists if the user leaves the page
+
+---
+## Extra note:
+I'm currently working on code clean-up and also completing the React version of this App. 
+
+[^] Made with 💚 and Javascript
+

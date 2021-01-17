@@ -56,7 +56,7 @@ function listNominations() {
 function removeNomination(e) {
 	db = db.filter(item => item.imdbID != e.target.id)
 	db.length < 5 ? notificationBanner.style.display = 'none' : ''
-	listNominations()
+	db.length > 1 ? listNominations() : nominations.style.display = 'block'
 }
 
 async function getMovies (e) {
