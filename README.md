@@ -1,6 +1,7 @@
 # UX Developer Intern & Web Developer Intern Challenge - Summer 2021
 ## This is the vanilla version of the challenge solution. 
-[View React Version here](https://asoluka.github.io/shoppies-react/)
+##### [View React Version here - still in the works](https://asoluka.github.io/shoppies-react/)
+
 ---
 
 
